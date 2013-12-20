@@ -179,7 +179,7 @@ void *works4demo(void *threadid)
 
     tid = (long)threadid;
     pthread_attr_getstacksize(&universe_attr, &my_stack_size);
-    printf("load the my_stack_size=%li bytes\n", my_stack_size);
+    printf("Thread %ld : load the my_stack_size=%li bytes\n", tid, my_stack_size);
 
     for(i = 0; i < N; i++){
         for(j = 0; j < N; j++){
